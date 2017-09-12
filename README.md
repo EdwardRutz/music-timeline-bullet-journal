@@ -1,4 +1,4 @@
-#  Muscic-Timeline-Bullet-Journal
+#  Music-Timeline-Bullet-Journal
 
 Create a soundtrack of your life with a music timeline using the Timeline-Bullet-Journal.
 
