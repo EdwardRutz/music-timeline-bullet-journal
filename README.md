@@ -13,18 +13,18 @@ Create a soundtrack of your life with a music timeline using the Timeline-Bullet
 
 ### PROBLEM ADDRESSED
   - Addresses the lack of timelines in a person's life.
-  - Timelins which are quick and easy to make (and share).
+  - Timelines which are quick and easy to make (and share).
   - Make timelines great again.
 
 ### USER FOCUSED GOALS
   - A new appreciation for music and events in their life.
   - Relate their life to significant media and events.
-  - Inspired from personal history and moving toward a better future.
+  - Inspire from personal history and motivate toward a better future.
   - Have fun.
 
 ### MY GOALS
   - Build a SPA website using AngularJS.
-  - Learn and Have fun.
+  - Learn and have fun.
 
 ## DOCUMENTATION
 - [Kaban/Project Board](https://github.com/edwardrz/music-timeline-bullet-journal/projects/1?)
