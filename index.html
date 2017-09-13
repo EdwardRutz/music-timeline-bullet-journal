@@ -7,10 +7,12 @@
 			<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	
-	<body ng-app="myApp">
+	<body ng-app="capstoneApp">
 	
-		<header>Music Timeline</header>
-		<p>Build a soundtrack of your life.</p>
+		<header>
+			<h1>Music Timeline</h1>
+		<p class="tagLine">Build a soundtrack of your life.</p>
+		</header>
 			
 
 			<div ng-view></div>
@@ -30,11 +32,11 @@
 
 
 			<!-- FACTORIES -->
-			<!-- <script src="./app/factories/bookFactory.js"></script> -->
+			<script src="./app/factories/eventFactory.js"></script>
 	
 
 			<!-- CONTROLLERS -->
-			<!-- <script src="./app/controllers/bookCtrl.js"></script> -->
+			<script src="./app/controllers/homeViewCtrl.js"></script>
 	
 	</body>	
 </html>
