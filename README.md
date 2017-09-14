@@ -17,7 +17,7 @@ Create a soundtrack of your life with a music timeline using the Timeline-Bullet
 - Save data, provide a way to backup and transfer data.
 - Add album art, edit, delete and format information.
 - Display information in a useful and visually meaningful way.
-- Export timelines.
+- Export timelines.  
 
 
 
