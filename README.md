@@ -11,7 +11,7 @@ Create a soundtrack of your life with a music timeline using the Timeline-Bullet
 - Add pictures, videos, links and notes to your timeline.
 - Make a timeline for a specific period of time, event or project.
 
-## SPECIFICATIONS
+## Specifications
 - User authentication for the site.
 - Add songs, dates and journal entries about why the song is meaningful.
 - Save data, provide a way to backup and transfer data.
@@ -19,14 +19,11 @@ Create a soundtrack of your life with a music timeline using the Timeline-Bullet
 - Display information in a useful and visually meaningful way.
 - Export timelines.
 
-- [ ] Connect Firebase data
-- [ ] Do a basic timeline display: 
-  - [ ] Grid
-  - [ ] Column or classic line...whatever is easier.
 
 
-
-## DOCUMENTATION
+## Documentation
 - [Kaban/Project Board](https://github.com/edwardrz/music-timeline-bullet-journal/projects/1?)
 - [Project Wiki](https://github.com/edwardrz/music-timeline-bullet-journal/wiki)
   - [Project Overview](https://github.com/edwardrz/music-timeline-bullet-journal/wiki/Overview)
+
+
