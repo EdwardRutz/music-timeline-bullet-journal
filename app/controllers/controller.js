@@ -7,7 +7,7 @@ $scope.eventArray = [];
 	
 	eventFactory.getEvent()  //define function
 	.then(function(eventCollection) {
-		$scope.eventArray = eventCollection[0];//binds data to scope
+		$scope.eventArray = eventCollection;//binds data to scope
 		console.log("$scope.eventArray", $scope.eventArray);
 	});
 });

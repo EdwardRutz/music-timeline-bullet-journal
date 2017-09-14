@@ -10,6 +10,15 @@ app.config(["$routeProvider",
 			templateUrl: "partials/homeView.html",
 			controller: "controller",
 		})
+		// .when("/formTimeline", {
+		// templateUrl: "partials/form.html",
+		// controller: "controller",
+		// })
+		// .when("/formTimeline", {
+		// templateUrl: "partials/form.html",
+		// controller: "controller",
+		// })
+
 		.otherwise("/");
 }]);
 

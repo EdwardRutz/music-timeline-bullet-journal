@@ -6,7 +6,7 @@ app.factory("eventFactory", function($q, $http){
 	const getEvent = () => {
 		let eventArray = [];
 		return $q ((resolve, reject) => {
-			$http.get("./data/eventData.json")
+			$http.get("https://timeline-journal.firebaseio.com/events.json")
 			.then((eventObject) => {
 				let eventCollection = eventObject.data;
 				console.log("eventObject.data", eventObject.data);
@@ -21,11 +21,9 @@ app.factory("eventFactory", function($q, $http){
 				reject(error);
 			});
 		});
-
 	};
 
 	console.log("getEvent", getEvent);
 	return {getEvent};
 });
-
 
