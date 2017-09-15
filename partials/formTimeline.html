@@ -1,20 +1,18 @@
 <p>timelineForm.html</p>
+<!-- [ ] Do I need to do a separate factory? -->
 
 <form>
     <div>
         <label>Date</label>
-        <input type="text" class="form-control" placeholder="1/12/18" ng-model=""/>
-    </div>
-    <div>
+        <input type="text" class="form-control" placeholder="1/12/18" ng-model="eventArray.date"/>
         <label>Title</label>
-        <input type="text" class="form-control" placeholder="Song Title" ng-model=""/>
-    </div>
-    <div>
+        <input type="text" class="form-control" placeholder="Song Title" ng-model="eventArray.eventTitle"/>
         <label>Journal Entry</label>
-        <input type="text" class="form-control" placeholder="Write details" ng-model=""/>
+        <input type="text" class="form-control" placeholder="Write details" ng-model="eventArray.journalEntry"/>
     </div>
     
     <div class="text-center">
-        <button class="addBtn" ng-click="">ADD</button>    
+        <button class="addBtn" ng-click="submitData()">ADD</button>    
     </div>
+    
 </form>
