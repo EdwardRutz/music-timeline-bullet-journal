@@ -1,18 +1,26 @@
 <p>timelineForm.html</p>
 <!-- [ ] Do I need to do a separate factory? -->
-
+<button>Prompt Ideas</button>
+<br>
 <form>
-    <div>
+    <div class="text-center">
         <label>Date</label>
         <input type="text" class="form-control" placeholder="1/12/18" ng-model="eventArray.date"/>
+
         <label>Title</label>
         <input type="text" class="form-control" placeholder="Song Title" ng-model="eventArray.eventTitle"/>
+
         <label>Journal Entry</label>
         <input type="text" class="form-control" placeholder="Write details" ng-model="eventArray.journalEntry"/>
-    </div>
-    
-    <div class="text-center">
+
+         <label>Image</label>
+        <input type="text" class="form-control" placeholder="Add Image" ng-model="eventArray.image"/>
+
         <button class="addBtn" ng-click="submitData()">ADD</button>    
     </div>
     
-</form>
+    <div ng-repeat="item in eventArray">
+       <div>{{item.date}}  -  {{item.eventTitle}}</div>
+    </div>
+
+

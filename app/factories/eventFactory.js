@@ -26,4 +26,15 @@ app.factory("eventFactory", function($q, $http){
 	console.log("getEvent", getEvent);
 	return {getEvent};
 });
-
+ const addEvent = function(obj){
+        let newObj = JSON.stringify(obj);
+        return $http.post(`/items.json`, newObj)
+        .then( (data) => {
+            console.log("data", data);
+            return data;
+        }, (error) => {
+            let errorCode = error.code;
+            let errorMessage = error.message;
+            console.log("error", errorCode, errorMessage);
+        });
+    };
