@@ -11,33 +11,30 @@
 	
 		<header>
 			<h1>Music Timeline</h1>
-		<p class="tagLine">Build a soundtrack of your life.</p>
-		<div ng-include="'partials/navbar.html'">
+			<p class="tagLine">Build a soundtrack of your life.</p>
+			<div ng-include="'partials/navbar.html'">
 		</header>
 
-			<div ng-view></div>
-		</div>
+
+		<div ng-view></div>
 
 			
 	
 			
 
-    <!-- SCRIPTS -->		
+    <!-- DEPENDENCIES -->		
 		<script src="./lib/node_modules/angular/angular.min.js"></script>
 		<script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
 		<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="./app/app.js"></script>
 
+		<!-- FACTORIES -->
+		<script src="./app/factories/eventFactory.js"></script>
 
+		<!-- CONTROLLERS -->
+		<script src="./app/controllers/controller.js"></script>
 
-			<!-- FACTORIES -->
-			<script src="./app/factories/eventFactory.js"></script>
-	
-
-			<!-- CONTROLLERS -->
-			<script src="./app/controllers/controller.js"></script>
-	
 	</body>	
 </html>
 
