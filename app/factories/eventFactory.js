@@ -28,7 +28,7 @@ app.factory("eventFactory", function($q, $http){
 });
  const addEvent = function(obj){
         let newObj = JSON.stringify(obj);
-        return $http.post(`/items.json`, newObj)
+        return $http.post(`/items.json`, newObj) //???
         .then( (data) => {
             console.log("data", data);
             return data;
