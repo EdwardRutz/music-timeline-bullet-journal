@@ -18,7 +18,10 @@ app.config(["$routeProvider",
 		templateUrl: "partials/displayTimeline.html",
 		controller: "controller",
 		})
-
+		.when("/soundtrack", {
+		templateUrl: "partials/createSoundtrack.html",
+		controller: "controller",
+		})
 		.otherwise("/");
 }]);
 
