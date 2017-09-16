@@ -4,23 +4,29 @@
 <br>
 <form>
     <div class="text-center">
+        <input type="hidden" ng-model="entry.id"/>
+
         <label>Date</label>
-        <input type="text" class="form-control" placeholder="1/12/18" ng-model="eventArray.date"/>
+        <input type="text" class="form-control" placeholder="1/12/18" ng-model="entry.date"/>
 
         <label>Title</label>
-        <input type="text" class="form-control" placeholder="Song Title" ng-model="eventArray.eventTitle"/>
+        <input type="text" class="form-control" placeholder="Song Title" ng-model="entry.eventTitle"/>
 
         <label>Journal Entry</label>
-        <input type="text" class="form-control" placeholder="Write details" ng-model="eventArray.journalEntry"/>
+        <input type="text" class="form-control" placeholder="Write details" ng-model="entry.journalEntry"/>
 
          <label>Image</label>
-        <input type="text" class="form-control" placeholder="Add Image" ng-model="eventArray.image"/>
+        <input type="text" class="form-control" placeholder="Add Image" ng-model="entry.image"/>
 
-        <button class="addBtn" ng-click="submitData()">ADD</button>    
+        <button class="addBtn" ng-click="addInfo()">ADD/Update</button>    
     </div>
     
+    
     <div ng-repeat="item in eventArray">
-       <div>{{item.date}}  -  {{item.eventTitle}}</div>
+       <div>{{item.date}}  -  {{item.eventTitle}}
+         <button ng-click="deleteEvent(item.id)" class="btn btn-danger">X</button>
+       <button ng-click="editEvent(item.id)" class="btn btn-link">Edit</button> 
+        </div>
     </div>
 
 
