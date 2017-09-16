@@ -2,7 +2,9 @@
 console.log("eventFactory.js");
 
 //must use the word "function" and not a fat arrow
-app.factory("eventFactory", function($q, $http){
+app.factory("eventFactory", function($q, $http)
+{
+
 	const getEvent = () => {
 		let eventArray = [];
 		return $q ((resolve, reject) => {
@@ -23,12 +25,10 @@ app.factory("eventFactory", function($q, $http){
 		});
 	};
 
-	console.log("getEvent", getEvent);
-	return {getEvent};
-});
- const addEvent = function(obj){
+	const addEvent = function(obj){
+		
         let newObj = JSON.stringify(obj);
-        return $http.post(`/items.json`, newObj) //???
+        return $http.post("https://timeline-journal.firebaseio.com/events.json", newObj) //???
         .then( (data) => {
             console.log("data", data);
             return data;
@@ -38,3 +38,47 @@ app.factory("eventFactory", function($q, $http){
             console.log("error", errorCode, errorMessage);
         });
     };
+	
+	const deleteEvent = function(id){
+        return $q( (resolve, reject) => {
+            $http.delete(`https://timeline-journal.firebaseio.com/events/${id}.json`)
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+        });
+    };
+
+ 	const editEvent = function( obj) {
+        console.log(" obj to update",  obj);
+        return $q((resolve, reject) => {
+        	var id = obj.id;
+        	var entry = 
+        	{
+				date:obj.date,
+				eventTitle:obj.eventTitle,
+				eventCategory:obj.eventCategory,
+				image:obj.image,
+				journalEntry :obj.journalEntry
+			};
+            let newObj = JSON.stringify(entry);
+            $http.patch(`https://timeline-journal.firebaseio.com/events/${id}.json`, newObj)
+            .then((data) => {
+                resolve(data);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+        });
+    };		
+
+   
+	console.log("getEvent", getEvent);
+	return {getEvent,addEvent, deleteEvent, editEvent};
+
+
+
+});
+ 
