@@ -1,6 +1,6 @@
 <p>timelineForm.html</p>
 <!-- [ ] Do I need to do a separate factory? -->
-<button>Prompt Ideas</button>
+<button ng-click="randomPrompt()">Prompt Ideas</button>
 <br>
 <form>
     <div class="text-center">
@@ -18,7 +18,7 @@
          <label>Image</label>
         <input type="text" class="form-control" placeholder="Add Image" ng-model="entry.image"/>
 
-        <button class="addBtn" ng-click="addInfo()">ADD/Update</button>    
+        <button class="addBtn" ng-click="addInfo()">ADD/UPDATE</button>    
     </div>
     
     
