@@ -28,9 +28,57 @@ h1 {
 	text-align: center;
 }
 /* ------- COLORS ------- */
+/* 58595B UT Smokey   OLD: #6495ED, cornflowerblue*/
+
 
 
 /***********  NAVIGATION  ***************/
+
+nav {
+	text-align: center;
+	padding: 10px 0;
+	margin: 20px 0 0;
+	background: #58595B; 
+}
+
+nav ul {
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+	font-size: 1em;
+}
+
+nav li {
+	display: inline;
+	padding: 0 1em 0 1em;
+	margin-right: 0.5em;
+}
+
+nav a {
+	color: #fff;
+}
+
+
+
+// nav a:visited {
+// 	color: #5CC9F5;  //Maya Blue 
+// } 
+
+/* selected nav link */
+nav a.selected  {
+	color: #FF8200; /* TN Orange*/
+}
+
+nav a:hover {
+	color: #FF8200; /* TN Orange*/
+	text-decoration: underline;
+}
+
+a:focus {
+	color: white;
+	background-color: #FF8200;
+}
+
 
 
 /***********  Display Timelines Dropdown Button  ***************/
