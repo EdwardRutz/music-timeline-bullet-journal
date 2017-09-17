@@ -28,7 +28,12 @@ h1 {
 	text-align: center;
 }
 /* ------- COLORS ------- */
-/* 58595B UT Smokey   OLD: #6495ED, cornflowerblue*/
+/* 
+#58595B; UT Smokey   
+#FF8200; TN Orange
+White, Black
+(OLD: #6495ED, cornflowerblue)
+*/
 
 
 
@@ -72,11 +77,15 @@ nav a.selected  {
 nav a:hover {
 	color: #FF8200; /* TN Orange*/
 	text-decoration: underline;
+	font-weight: bold;
 }
 
 a:focus {
-	color: white;
-	background-color: #FF8200;
+	color: #FF8200; /* TN Orange*/
+	text-decoration: underline;
+	font-weight: bold;
+	// color: white;
+	// background-color: #FF8200;
 }
 
 
