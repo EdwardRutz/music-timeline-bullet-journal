@@ -2,41 +2,65 @@
 <!-- [ ] Do I need to do a separate factory? -->
 <button ng-click="randomPrompt()">Prompt Ideas</button>
 <br>
-<form>
+<div class="panel-body">
     <div class="text-center">
+        <!-- hidden id field used to show data -->
         <input type="hidden" ng-model="entry.id"/>
-
-        <label>Date</label>
-        <input type="text" class="form-control" placeholder="1/12/18" ng-model="entry.date"/>
-
-        <label>Title</label>
-        <input type="text" class="form-control" placeholder="Song Title" ng-model="entry.eventTitle"/>
-
-        <label>Journal Entry</label>
-        <input type="text" class="form-control" placeholder="Write details" ng-model="entry.journalEntry"/>
-
-         <label>Image</label>
-        <input type="text" class="form-control" placeholder="Add Image" ng-model="entry.image"/>
-
-        <button class="addBtn" ng-click="addInfo()">ADD/UPDATE</button>    
-    </div>
-    
-    
-    <div ng-repeat="item in eventArray">
-       <div>{{item.date}}  -  {{item.eventTitle}}
-          <button ng-click="editEvent(item.id)" class="btn btn-link">[Edit]</button>
-          <button ng-click="editEvent(item.id)" class="btn btn-link">[View Details]</button> 
-          <button ng-click="deleteEvent(item.id)" class="btn btn-danger">X</button>
+       
+        <div class="col-xs-1">
+          <label>Date</label>
+          <input type="text" class="form-control" placeholder="1/12/18" ng-model="entry.date"/>
         </div>
+
+        <div class="col-xs-3">
+          <label>Title</label>
+          <input type="text" class="form-control" placeholder="Song Title" ng-model="entry.eventTitle"/>
+        </div>
+        <div class="col-xs-4">
+          <label>Journal Entry</label>
+          <input type="text" class="form-control" placeholder="Write details" ng-model="entry.journalEntry"/>
+        </div>
+        <div class="col-xs-2">
+           <label>Image</label>
+          <input type="text" class="form-control" placeholder="Add Image" ng-model="entry.image"/>
+        </div>
+      <!--   <div class="col-xs-1">
+          <label>Clear Row</label>
+          <button class="addBtn" ng-click="clearInfo()">Clear</button>
+      </div>  -->
+      <div class="col-xs-1">
+        <label>Add/Update</label>
+        <button class="addBtn" ng-click="addInfo()">Submit</button>
+      </div>    
+    </div>
+</div>
+
+
+    <!-- Loops over eventArray -->
+    <div ng-repeat="item in eventArray">
+      <div class="panel-body">
+        <div class="col-xs-1">{{item.date}}</div>
+        <div class="col-xs-2">{{item.eventTitle}}</div>
+          <div class="col-xs-3">            
+            <button ng-click="editEvent(item.id)" class="btn btn-link">[Edit]</button>
+            <button ng-click="editEvent(item.id)" class="btn btn-link">[View Details]</button> 
+            <button ng-click="deleteEvent(item.id)" id="deleteBtn" class="btn btn-link">[Delete]</button>
+          </div>
+      </div>
     </div>
 
 
 
 
+<!-- 
+        <div class="panel-body">
+             <div class="col-xs-2">{{item.createdBy}}</div>
+             <div class="col-xs-2">{{item.createdDate}}</div> 
+             <div class="col-xs-2">{{item.id}}</div>  
+             <div class="col-xs-5"><a ng-href="#!/note/{{item.id}}">{{item.note}}</a></div>
+             <div class="col-xs-1"><button ng-click="deleteNote(item.id)" class="btn btn-danger">X</button></div>
+             
+            
+        </div>
 
-
-
-
-
-
-
+ 
