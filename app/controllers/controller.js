@@ -56,17 +56,17 @@ app.controller("controller", function($scope, eventFactory, $location) {
 	 	}
 	};
 
-	// $scope.clearInfo = function(id) {
-	// 	var x;
-	// 	$scope.entry = {
-	// 		id:"",
-	// 		date:"",
-	// 		eventTitle:"",
-	// 		eventCategory:"",
-	// 		image:"",
-	// 		journalEntry :""
-	// 		}
-	// 	};
+	$scope.clearInfo = function(id) {
+		
+		$scope.entry = {
+			id:"",
+			date:"",
+			eventTitle:"",
+			eventCategory:"",
+			image:"",
+			journalEntry :""
+			}
+		};
 
 });
 
