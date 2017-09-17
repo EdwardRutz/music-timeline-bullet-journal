@@ -39,8 +39,8 @@
     <!-- Loops over eventArray -->
     <div ng-repeat="item in eventArray">
       <div class="panel-body">
-        <div class="col-xs-1">{{item.date}}</div>
-        <div class="col-xs-2">{{item.eventTitle}}</div>
+        <div class="col-xs-1 row rowSpacing">{{item.date}}</div>
+        <div class="col-xs-2 row rowSpacing">{{item.eventTitle}}</div>
           <div class="col-xs-3">            
             <button ng-click="editEvent(item.id)" class="btn btn-link row margin-row">[Edit]</button>
             <button ng-click="editEvent(item.id)" class="btn btn-link">[View Details]</button> 
