@@ -55,9 +55,10 @@ app.factory("eventFactory", function($q, $http)
         console.log(" obj to update",  obj);
         return $q((resolve, reject) => {
         	var id = obj.id;
-        	var entry = 
+           //Firebase didn't like including an id not in the url so add all the fields except id.
+            var entry = 
         	{
-				date:obj.date,
+                date:obj.date,
 				eventTitle:obj.eventTitle,
 				eventCategory:obj.eventCategory,
 				image:obj.image,

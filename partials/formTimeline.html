@@ -24,9 +24,19 @@
     
     <div ng-repeat="item in eventArray">
        <div>{{item.date}}  -  {{item.eventTitle}}
-         <button ng-click="deleteEvent(item.id)" class="btn btn-danger">X</button>
-       <button ng-click="editEvent(item.id)" class="btn btn-link">Edit</button> 
+          <button ng-click="editEvent(item.id)" class="btn btn-link">Edit</button>
+          <button ng-click="editEvent(item.id)" class="btn btn-link">View Details</button> 
+          <button ng-click="deleteEvent(item.id)" class="btn btn-danger">X</button>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
 
 
