@@ -51,7 +51,7 @@ app.controller("controller", function($scope, eventFactory, $location) {
  	{
  		if(id === $scope.eventArray[x].id)
  		{
- 			$scope.entry = $scope.eventArray[x]
+ 			$scope.entry = $scope.eventArray[x];
  		}
  	}
 	};
