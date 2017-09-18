@@ -14,12 +14,20 @@ app.config(["$routeProvider",
 		templateUrl: "partials/formTimeline.html",
 		controller: "controller",
 		})
-		.when("/displayTimeline", {
-		templateUrl: "partials/displayTimeline.html",
+		.when("/display", {
+		templateUrl: "partials/display.html",
 		controller: "controller",
 		})
 		.when("/soundtrack", {
 		templateUrl: "partials/createSoundtrack.html",
+		controller: "controller",
+		})
+		.when("/displayTimeline", {
+		templateUrl: "partials/displayTimeline.html",
+		controller: "controller",
+		})
+		.when("/displayChart", {
+		templateUrl: "partials/displayChart.html",
 		controller: "controller",
 		})
 		.otherwise("/");

@@ -1,0 +1,17 @@
+<p>displayChart.html</p>
+
+
+
+ <!-- Used Angular for this table. -->
+<center>
+<table>
+		<th>Date</th>
+		<th>Song</th>
+		<th>Journal Entry</th>
+  <tr ng-repeat="item in eventArray">
+    <td>{{item.date}}</td>
+    <td>{{item.eventTitle}}</td>
+    <td>{{item.journalEntry}}</td>
+  </tr>
+</table>
+</center>
