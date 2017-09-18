@@ -20,12 +20,20 @@ app.controller("controller", function($scope, eventFactory, $location) {
 		console.log("$scope.eventArray", $scope.eventArray);
 	});
 
+	const showAllEvents = function(){
+    	eventFactory.getEvent()
+    	.then((eventArray) => {
+    		console.log("showAllEvents", eventArray);
+    		$scope.eventArray =  eventArray;
+    	});
+    };
 		
   $scope.addInfo = function()
   {
     	if($scope.entry.id === "")
     	{
     		eventFactory.addEvent($scope.entry).then((data) => {
+    	showAllEvents();
     		$location.url("/formTimeline"); });
     	}
 		else 
@@ -33,7 +41,6 @@ app.controller("controller", function($scope, eventFactory, $location) {
 			eventFactory.editEvent($scope.entry).then((data) => {
     		$location.url("/formTimeline");});
 		}
-    	
     };
 
      $scope.deleteEvent = function(id)
@@ -41,7 +48,7 @@ app.controller("controller", function($scope, eventFactory, $location) {
     	eventFactory.deleteEvent(id)
     	.then( (irrelevant) => {
 	    $location.url("/formTimeline");
-
+	    showAllEvents();
     	});
     };
 
@@ -67,7 +74,7 @@ app.controller("controller", function($scope, eventFactory, $location) {
 			journalEntry :""
 			};
 		};
-
+	showAllEvents();
 });
 
 
