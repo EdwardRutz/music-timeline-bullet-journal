@@ -1,7 +1,11 @@
 <p>timelineForm.html</p>
 <!-- [ ] Do I need to do a separate factory? -->
+<!-- Used Bootstrap to display data -->
+
 <button ng-click="randomPrompt()">Prompt Ideas</button>
 <br>
+
+<!-- Input data into database -->
 <div class="panel-body">
     <div class="text-center">
         <!-- hidden id field used to show data -->
@@ -36,16 +40,18 @@
 </div>
 
 
-    <!-- Loops over eventArray -->
+  <!-- Show data.Loops over eventArray. Used Bootstrap to display data. -->
     <div ng-repeat="item in eventArray">
       <div class="panel-body">
-        <div class="col-xs-1 row rowSpacing">{{item.date}}</div>
-        <div class="col-xs-2 row rowSpacing">{{item.eventTitle}}</div>
+        <div class="col-xs-1 rowSpacing">{{item.date}}</div>
+        <div class="col-xs-2 rowSpacing">{{item.eventTitle}}</div>
+
           <div class="col-xs-3">            
             <button ng-click="editEvent(item.id)" class="btn btn-link row margin-row">[Edit]</button>
             <button ng-click="editEvent(item.id)" class="btn btn-link">[View Details]</button> 
             <button ng-click="deleteEvent(item.id)" id="deleteBtn" class="btn btn-link">[Delete]</button>
           </div>
+          <div class="col-xs-6"></div>
       </div>
     </div>
 
