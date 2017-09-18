@@ -13,7 +13,7 @@
        
         <div class="col-xs-1">
           <label>Date</label>
-          <input type="text" class="form-control" placeholder="1/12/18" ng-model="entry.date"/>
+          <input type="text" class="form-control" placeholder="2018-04-21" ng-model="entry.date"/>
         </div>
 
         <div class="col-xs-3">
@@ -41,7 +41,7 @@
 
 
   <!-- Show data.Loops over eventArray. Used Bootstrap to display data. -->
-    <div ng-repeat="item in eventArray">
+    <div ng-repeat="item in eventArray | orderBy:'+date'">
       <div class="panel-body">
         <div class="col-xs-1 rowSpacing">{{item.date}}</div>
         <div class="col-xs-2 rowSpacing">{{item.eventTitle}}</div>
