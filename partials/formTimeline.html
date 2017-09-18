@@ -26,7 +26,7 @@
         </div>
         <div class="col-xs-2">
            <label>Image</label>
-          <input type="text" class="form-control" placeholder="Add Image" ng-model="entry.image"/>
+          <input type="text" class="form-control" placeholder="Add Image Link/URL" ng-model="entry.image"/>
         </div>
         <div class="col-xs-1">
           <label>Clear Row</label>
@@ -45,7 +45,6 @@
       <div class="panel-body">
         <div class="col-xs-1 rowSpacing">{{item.date}}</div>
         <div class="col-xs-2 rowSpacing">{{item.eventTitle}}</div>
-
           <div class="col-xs-3">            
             <button ng-click="editEvent(item.id)" class="btn btn-link row margin-row">[Edit]</button>
 
@@ -54,6 +53,8 @@
             <button ng-click="deleteEvent(item.id)" id="deleteBtn" class="btn btn-link">[Delete]</button>
           </div>
           
+        <!-- <div class="col-xs-2 rowSpacing">{{item.image}}</div> -->
+        <img style="width: 75px; height: 75px; display: block;" alt="" class="" src="{{item.image}}">
           <div class="col-xs-6"></div>
       </div>
     </div>
