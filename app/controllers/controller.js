@@ -65,7 +65,7 @@ app.controller("controller", function($scope, eventFactory, $location) {
 			eventCategory:"",
 			image:"",
 			journalEntry :""
-			}
+			};
 		};
 
 });
