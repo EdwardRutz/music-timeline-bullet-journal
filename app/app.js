@@ -30,6 +30,14 @@ app.config(["$routeProvider",
 		templateUrl: "partials/displayChart.html",
 		controller: "controller",
 		})
+		.when("/displayAsciiOldSchool", {
+		templateUrl: "partials/displayAsciiOldSchool.html",
+		controller: "controller",
+		})
+		.when("/displayAsciiVertical", {
+		templateUrl: "partials/displayAsciiVertical.html",
+		controller: "controller",
+		})
 		.otherwise("/");
 }]);
 
