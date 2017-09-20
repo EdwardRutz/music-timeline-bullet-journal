@@ -1,0 +1,19 @@
+
+
+<ul class="displayNav">
+		<li><a ng-href="#!/displayVertical">[Timeline]</a></li>
+    <li><a ng-href="#!/displayChart">[Chart]</a></li>
+
+</ul>
+<br>
+
+
+<center>
+<table class="noBorder">
+  <tr ng-repeat="item in eventArray | orderBy:'+date'" id="asciiVertical">
+    <td>{{item.date}} ---</td>
+  	<td>--- <img style="width: 75px; height: 75px; display:inline;" alt="" class="" ng-src="{{item.image}}" title="{{item.journalEntry}}">   --- {{item.eventTitle}}</td>
+  </tr>
+  
+</table>
+</center>
