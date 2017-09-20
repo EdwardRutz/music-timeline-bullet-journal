@@ -5,6 +5,12 @@
 			<meta charset="utf-8">
 			<link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
 			<link rel="stylesheet" type="text/css" href="css/main.css">
+
+			<!-- Bootstrap links for Tool Tips -->
+			<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+			
+		 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+		  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	</head>
 	
 	<body ng-app="capstoneApp">
@@ -17,10 +23,12 @@
 
 
 		<div ng-view></div>
+		
 
-			
-	
-			
+		<h1>???</h1>
+		<p>Why does this show up on all my partials?</p>
+
+
 
     <!-- DEPENDENCIES -->		
 		<script src="./lib/node_modules/angular/angular.min.js"></script>
@@ -29,6 +37,14 @@
 		<script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="./app/app.js"></script>
 
+	<!-- 	<!-- Initializes Bootstrap Tool Tips -->
+		<script>
+			$(document).ready(function(){
+			    $('[data-toggle="tooltip"]').tooltip();   
+			});
+		</script> -->
+
+		<script type="text/javascript" src="./app/main.js"></script>
 		<!-- FACTORIES -->
 		<script src="./app/factories/eventFactory.js"></script>
 
