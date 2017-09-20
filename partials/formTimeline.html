@@ -1,9 +1,11 @@
 
-<!-- [ ] Do I need to do a separate factory? -->
-<!-- Used Bootstrap to display data -->
-<!-- <br><br>
-<button ng-click="randomPrompt()">Prompt Ideas</button>
- --><br>
+
+<!-- Used Bootstrap for the chart -->
+<!-- <br><br> -->
+
+  <!-- Prompt Button -->
+<!-- <button ng-click="randomPrompt()">Prompt Ideas</button> -->
+<br>
 
 <!-- Input data into database -->
 <div class="panel-body">
@@ -40,7 +42,7 @@
 </div>
 <hr>
 
-  <!-- Show data.Loops over eventArray. Used Bootstrap to display data. -->
+  <!-- Show data.Loops over eventArray. Used Bootstrap for the Chart. -->
     <div ng-repeat="item in eventArray | orderBy:'+date'">
       <div class="panel-body">
         <div class="col-xs-1 rowSpacing">{{item.date}}</div>
@@ -54,7 +56,7 @@
           </div>
           
         <!-- <div class="col-xs-2 rowSpacing">{{item.image}}</div> -->
-        <img style="width: 75px; height: 75px; display: block;" alt="" class="" src="{{item.image}}">
+        <img style="width: 75px; height: 75px; display: block;" alt="" class="" ng-src="{{item.image}}">
           <div class="col-xs-6"></div>
       </div>
     </div>

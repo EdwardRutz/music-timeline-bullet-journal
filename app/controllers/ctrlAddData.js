@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("ctrlAddData.js Active");
 /*
  Creates entries into the eventData table on Firebase.  
  */
