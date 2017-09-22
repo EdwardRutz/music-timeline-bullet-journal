@@ -1,8 +1,4 @@
 /***********  BASE STYLES  ***************/
-/** {
-	box-sizing: border-box;
-}*/
-
 body {
 	font-family: sans-serif;
 	font-size: 1.6em;
@@ -31,7 +27,7 @@ h1 {
 .tagLine {
 	font-style: italic;
 	text-align: center;
-	font-size: 1em; 
+	font-size: 1.5em; 
 }
 
 .text-center {
@@ -161,9 +157,8 @@ table tr:nth-child(even) {
 }
 
 /***********  Display ASCII Vertical  ***************/
-// .bullets {
-// 	list-style-type: none;
-// }
+
+
 #asciiVertical {
 	border-collapse: collapse;
 	background-color: #ffffff;
@@ -175,9 +170,8 @@ table tr:nth-child(even) {
 	border-style: hidden  
 }
 
+
 /***********  Display Timelines Dropdown Button  ***************/
-
-
 
 
 
