@@ -17,7 +17,6 @@ app.controller("controller", function($scope, eventFactory, $location) {
 	eventFactory.getEvent()  //define function
 	.then(function(eventCollection) {
 		$scope.eventArray = eventCollection;//binds data to scope
-		console.log("$scope.eventArray", $scope.eventArray);
 	});
 
 	const showAllEvents = function(){
@@ -74,6 +73,23 @@ app.controller("controller", function($scope, eventFactory, $location) {
 			journalEntry :""
 			};
 		};
+
+// 	$scope.prompt = function(id) {
+// 		 var promptArray = [
+
+//     "What is the first song you remember liking?",
+//     "Think about a special person in your life, what song reminds you of them?",
+//     "What was the first music you bought?",
+//     "What song reminds you of your favorite trip?",
+//     "What song reminds you of fun times in high school?",
+//     "What song reminds you of good friends?",
+//     "What song motivates you to get out there and kick arse?",
+//     "Think of songs that remind you of the beach"
+// ];
+
+//   	let promptItem = promptArray[id];
+// 	};
+
 	showAllEvents();
 });
 
