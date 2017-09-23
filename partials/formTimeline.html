@@ -9,6 +9,7 @@
 
 <!-- Input data into database -->
 <div class="panel-body">
+        <h3>Enter Your Music and Memories</h3>
     <div class="text-center">
         <!-- hidden id field used to show data -->
         <input type="hidden" ng-model="entry.id"/>
@@ -40,7 +41,7 @@
       </div>    
     </div>
 </div>
-<hr>
+<hr class="hrStyle1">
 
   <!-- Show data.Loops over eventArray. Used Bootstrap for the Chart. -->
     <div ng-repeat="item in eventArray | orderBy:'+date'">

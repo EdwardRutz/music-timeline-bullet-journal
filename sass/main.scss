@@ -3,6 +3,15 @@ body {
 	font-family: sans-serif;
 	font-size: 1.6em;
 	color: 000; 
+	margin: 0 auto;
+	width: 960px;
+	min-height:100%; 
+	position:relative;
+}
+
+footer { 
+	position: absolute; 
+	bottom: 0;
 }
 
 p {
@@ -13,6 +22,7 @@ p {
 h1 {
 	text-align: center;
 }
+
 
 .tagLine {
 	font-style: italic;
@@ -30,7 +40,7 @@ h1 {
 
 /* ------- COLORS ------- */
 /* 
-#58595B; UT Smokey   
+#58595B; UT Smokey (rgb: 88, 89, 91)   
 #FF8200; TN Orange
 White, Black
 (OLD: #6495ED, cornflowerblue)
@@ -73,6 +83,7 @@ nav a {
 /* selected nav link */
 nav a.selected  {
 	color: #FF8200; /* TN Orange*/
+	text-decoration: underline;
 }
 
 nav a:hover {
@@ -109,8 +120,26 @@ a:focus {
 	margin-bottom: 0px;
 }
 
+/***********  hr  ***************/
 
+/* hr with shadow */
 
+// hr.hrStyle2 {
+//     height: 12px;
+//     border: 0;
+//     box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+// }
+
+/* hr transparent gradient   
+	Source: https://www.css-tricks.com/examples/hrs/
+*/
+
+hr.hrStyle1 {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(88, 89, 91, 0.75), rgba(0, 0, 0, 0));
+    	//rgba(0, 0, 0, 0.75)
+}
 
 /***********  Display Chart  ***************/
 
