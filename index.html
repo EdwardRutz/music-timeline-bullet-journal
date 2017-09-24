@@ -13,37 +13,41 @@
 	</head>
 	
 	<body ng-app="capstoneApp">
-	
-		<header>
-			<h1>Music Timeline</h1>
-			<p class="tagLine">Build the Soundtrack of Your Life.</p>
-			<div ng-include="'partials/navbar.html'">
-		</header>
-
-
-		<div ng-view></div>
+		<div class="wrapper"> <!-- Wrapper -->
 		
+		
+			<header>
+				<h1>Music Timeline</h1>
+				<p class="tagLine">Build the Soundtrack of Your Life.</p>
+				<div ng-include="'partials/navbar.html'">
+			</header>
 
-		<footer>
-			<p>Footer</p>
-		</footer>
+
+			<div ng-view></div>
+			
+			<br>
+			
+			<footer>
+				<p>Footer</p>
+			</footer>
 
 
-    <!-- DEPENDENCIES -->		
-		<script src="./lib/node_modules/angular/angular.min.js"></script>
-		<script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
-		<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
-		<script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="./app/app.js"></script>
+	    <!-- DEPENDENCIES -->		
+			<script src="./lib/node_modules/angular/angular.min.js"></script>
+			<script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+			<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+			<script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+			<script src="./app/app.js"></script>
 
-		<!-- <script type="text/javascript" src="./app/main.js"></script> -->
+			<!-- <script type="text/javascript" src="./app/main.js"></script> -->
 
-		<!-- FACTORIES -->
-		<script src="./app/factories/eventFactory.js"></script>
+			<!-- FACTORIES -->
+			<script src="./app/factories/eventFactory.js"></script>
 
-		<!-- CONTROLLERS -->
-		<script src="./app/controllers/controller.js"></script>
+			<!-- CONTROLLERS -->
+			<script src="./app/controllers/controller.js"></script>
 
+	</div> <!-- Wrapper -->
 	</body>	
 </html>
 

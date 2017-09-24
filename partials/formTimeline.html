@@ -8,12 +8,12 @@
 <br>
 
 <!-- Input data into database -->
+    <h2>Enter Your Music and Memories</h2>
 <div class="panel-body">
-        <h3>Enter Your Music and Memories</h3>
     <div class="text-center">
         <!-- hidden id field used to show data -->
         <input type="hidden" ng-model="entry.id"/>
-       
+
         <div class="col-xs-1">
           <label>Date</label>
           <input type="text" class="form-control" placeholder="2018-04-21" ng-model="entry.date"/>
@@ -25,24 +25,31 @@
         </div>
         <div class="col-xs-4">
           <label>Journal Entry</label>
+          <!-- <textarea class="" rows="1" id=""></textarea> -->
           <input type="text" class="form-control" placeholder="This song reminds me when..." ng-model="entry.journalEntry"/>
         </div>
         <div class="col-xs-2">
            <label>Image Link/URL</label>
           <input type="text" class="form-control" placeholder="http://www.albumImage.com" ng-model="entry.image"/>
         </div>
+
         <div class="col-xs-1">
           <label>Clear Row</label>
           <button class="addBtn btn btn-default" ng-click="clearInfo()">Clear</button>
       </div> 
+
       <div class="col-xs-1">
         <label>Add/Update</label>
         <button class="addBtn btn btn-success" ng-click="addInfo()">Submit</button>
-      </div>    
+      </div>
+
     </div>
 </div>
+
 <hr class="hrStyle1">
 
+  <h2>Music Details</h2>
+  
   <!-- Show data.Loops over eventArray. Used Bootstrap for the Chart. -->
     <div ng-repeat="item in eventArray | orderBy:'+date'">
       <div class="panel-body">
