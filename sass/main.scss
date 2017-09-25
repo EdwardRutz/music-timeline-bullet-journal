@@ -1,3 +1,5 @@
+//** [_] IS GRUNT ON?
+
 /***********  BASE STYLES  ***************/
 
 
@@ -33,14 +35,14 @@ h2 {
 	font-style: italic;
 }
 
-// input {
-// 	box-shadow: 0 0 3px #CC0000;
-// 	border-style: solid;
-// 	border-width: 1px;
-// 	border-color: black;
-// 	font-family: helvetica, arial, sans serif;
-// 	padding-left: 0px;
-// }
+input {
+	box-shadow: 0 0 3px #CC0000;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	font-family: helvetica, arial, sans serif;
+	padding-left: 0px;
+}
 
 .tagLine {
 	font-style: italic;
@@ -49,6 +51,7 @@ h2 {
 	color: #FF8200; 
 }
 
+
 .text-center {
 	text-align: center;
 }
@@ -56,9 +59,9 @@ h2 {
   margin-top:5px;
   margin-bottom:5px;  
 }
-// .input {
-// 	background-color: yellow;
-// }
+.inputForm {
+	background-color: #E5E5E5; //#FFFFDF light yellow
+}
 
 /* ------- COLORS ------- */
 /* 
