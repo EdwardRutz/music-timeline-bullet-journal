@@ -1,16 +1,21 @@
 
-
-<!-- Used Bootstrap for the chart -->
-<!-- <br><br> -->
-
-  <!-- Prompt Button -->
-<!-- <button ng-click="randomPrompt()">Prompt Ideas</button> -->
+  <h2>Enter Your Music &amp; Memories</h2>
+  
+  <div>
+      <!-- Prompt Button -->
+    <button class="btn btn-default" ng-click="prompt()">Prompt Ideas</button>
+    <!-- <button ng-click="count = count + 1" ng-init="count=0">Increment</button> -->
+    <span>
+      prompt: {{promptItem}}
+    </span>
+  </div>
 <br>
+<!-- <div ng-include="'partials/displayPrompt.html'"></div> -->
+<!-- <button ng-click="randomPrompt()">Prompt Ideas</button> -->
 
-<!-- Input data into database -->
-    <h2>Enter Your Music &amp; Memories</h2>
-  <div class="panel-body inputForm">
-    <div class="text-center">
+<!-- Input data into database.  Used Bootstrap for the chart -->
+<div class="panel-body inputForm">
+
         <!-- hidden id field used to show data -->
         <input type="hidden" ng-model="entry.id"/>
 
@@ -20,7 +25,7 @@
         </div>
 
         <div class="col-xs-3">
-          <label>Title</label>
+          <label>Song Title</label>
           <input type="text" class="form-control" placeholder="Song Title" ng-model="entry.eventTitle"/>
         </div>
         <div class="col-xs-4">
@@ -29,7 +34,7 @@
           <input type="text" class="form-control" placeholder="This song reminds me when..." ng-model="entry.journalEntry"/>
         </div>
         <div class="col-xs-2">
-           <label>Image Link/URL</label>
+           <label>Paste Image Link</label>
           <input type="text" class="form-control" placeholder="http://www.albumImage.com" ng-model="entry.image"/>
         </div>
 
@@ -43,8 +48,7 @@
         <button class="addBtn btn btn-success" ng-click="addInfo()">Submit</button>
       </div>
 
-    </div>
-</div>
+</div> <!-- panel body -->
 
 <hr class="hrStyle1">
 
@@ -55,10 +59,10 @@
       <div class="panel-body">
         <div class="col-xs-1 rowSpacing">{{item.date}}</div>
         <div class="col-xs-2 rowSpacing">{{item.eventTitle}}</div>
-        <div class="col-xs-5 rowSpacing">{{item.journalEntry}}</div>
+        <div class="col-xs-6 rowSpacing">{{item.journalEntry}}</div>
 
         <!-- <div class="col-xs-2 rowSpacing">{{item.image}}</div> -->
-        <img style="width: 75px; height: 75px; display: block;" alt="" class="" ng-src="{{item.image}}">
+        <img style="width: 75px; height: 75px; display: " alt="" class="" ng-src="{{item.image}}">
 
           <div class="col-xs-1">  <!-- Buttons -->          
             <button ng-click="editEvent(item.id)" class="btn btn-link fa fa-pencil" title="Edit"></button>
@@ -67,9 +71,9 @@
 
             <button ng-click="deleteEvent(item.id)" id="deleteBtn" class="btn btn-link fa fa-trash-o" title="DELETE"></button>
           </div> <!-- Buttons --> 
-      </div> <!-- panel-body -->
           
           <!-- <div class="col-xs-6"></div> -->
+      </div>
     </div>
 
 
