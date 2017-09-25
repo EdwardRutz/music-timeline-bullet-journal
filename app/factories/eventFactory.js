@@ -26,7 +26,7 @@ app.factory("eventFactory", function($q, $http)
 	const addEvent = function(obj){
 		
         let newObj = JSON.stringify(obj);
-        return $http.post("https://timeline-journal.firebaseio.com/events.json", newObj) //???
+        return $http.post("https://timeline-journal.firebaseio.com/events.json", newObj)
         .then( (data) => {
             return data;
         }, (error) => {

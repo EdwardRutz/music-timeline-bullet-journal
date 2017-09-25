@@ -8,14 +8,26 @@
 
  <!-- Used Angular for this table. -->
 <center>
-<table>
+<table width="90%">
 		<th>Date</th>
 		<th>Song</th>
 		<th>Journal Entry</th>
-  <tr ng-repeat="item in eventArray | orderBy:'+date'">
-    <td>{{item.date}}</td>
-    <td>{{item.eventTitle}}</td>
-    <td>{{item.journalEntry}}</td>
+  <tr ng-repeat="item in eventArray | orderBy:'+date'" >
+    <td width="10%">{{item.date}}</td>
+    <td width="20%">{{item.eventTitle}}</td>
+    <td width="60%">{{item.journalEntry}}</td>
   </tr>
 </table>
 </center>
+
+
+
+<!-- Code to sort date field -->
+    <!-- <div ng-app="myApp" ng-controller="myController"> -->
+        <!-- FOR '-joinDate' THE PREDICATE IS SET USING '-' (HYPHEN) KEY FOR DESCENDING ORDER. -->
+        <!-- <div ng-repeat="emps in empArray | orderBy : '-joinDate'">
+            <div> {{ emps.joinDate | date : 'dd/MM/yyyy' }} : {{ emps.values.name }} </div>
+        </div>
+    </div> -->
+
+

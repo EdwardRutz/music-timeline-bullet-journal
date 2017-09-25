@@ -74,6 +74,7 @@ app.controller("controller", function($scope, eventFactory, $location) {
 			};
 		};
 
+
 // 	$scope.prompt = function(id) {
 // 		 var promptArray = [
 
@@ -89,6 +90,7 @@ app.controller("controller", function($scope, eventFactory, $location) {
 
 //   	let promptItem = promptArray[id];
 // 	};
+
 
 	showAllEvents();
 });
