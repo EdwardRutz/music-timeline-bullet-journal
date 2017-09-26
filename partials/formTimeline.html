@@ -57,11 +57,11 @@
   <!-- Show data.Loops over eventArray. Used Bootstrap for the Chart. -->
     <div ng-repeat="item in eventArray | orderBy:'+date'">
       <div class="panel-body">
-        <div class="col-xs-1 rowSpacing">{{item.date}}</div>
-        <div class="col-xs-2 rowSpacing">{{item.eventTitle}}</div>
-        <div class="col-xs-6 rowSpacing">{{item.journalEntry}}</div>
+        <div class="col-xs-1">{{item.date}}</div>
+        <div class="col-xs-2">{{item.eventTitle}}</div>
+        <div class="col-xs-6">{{item.journalEntry}}</div>
 
-        <!-- <div class="col-xs-2 rowSpacing">{{item.image}}</div> -->
+        <!-- <div class="col-xs-2">{{item.image}}</div> -->
         <img style="width: 75px; height: 75px; display: " alt="" class="" ng-src="{{item.image}}">
 
           <div class="col-xs-1">  <!-- Buttons -->          
