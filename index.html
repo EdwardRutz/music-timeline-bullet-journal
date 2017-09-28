@@ -18,7 +18,7 @@
 	</head>
 	
 	<body ng-app="capstoneApp">
-		<div class="wrapper"> <!-- Wrapper -->
+		<div class="wrapper"> <!-- .wrapper -->
 		
 		
 			<header>
@@ -33,10 +33,16 @@
 			
 			<br>
 			
-			
+  </div> <!-- /.wrapper -->
+    <br>
 			<footer>
-				<p>Footer</p>
-			
+				<div class="copyright">
+				<p>Copyright &copy; 
+					<script>
+						var d = new Date()
+						document.write(d.getFullYear())
+					</script></p>
+				</div>
 			</footer>
 
 
@@ -65,7 +71,7 @@
 			<!-- CONTROLLERS -->
 			<script src="./app/controllers/controller.js"></script>
 
-	</div> <!-- Wrapper -->
+	
 	</body>	
 </html>
 
