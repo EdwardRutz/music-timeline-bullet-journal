@@ -12,8 +12,14 @@
 <table class="noBorder">
   <tr ng-repeat="item in eventArray | orderBy:'+date'" id="asciiVertical">
     <td>{{item.date}} ---</td>
-  	<td>--- <img style="width: 75px; height: 75px; display:inline;" alt="" class="" ng-src="{{item.image}}" title="{{item.journalEntry}}">   --- {{item.eventTitle}}</td>
+  	<td>--- <img style="width: 75px; height: 75px; display:inline;"  ng-src="{{item.image}}"  title="{{item.journalEntry}}">   --- {{item.eventTitle}}</td>
   </tr>
-  
+  <!-- Angular-Tooltips -->
+  <!-- Call the directive wherever you want in your html page
+<a href="#" tooltips tooltip-template="tooltip">Tooltip me</a> -->
 </table>
 </center>
+
+
+
+
