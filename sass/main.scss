@@ -12,19 +12,9 @@ body {
 	min-height:100%; 
 	position:relative;
 }
-
-// .wrapper {
-// 	background-color: #bed4e9;
-// }
-
-footer { 
-	position: absolute; 
-	bottom: 0;
-}
-
 p {
 	// font-size: .95em;
-	margin-bottom: 1.5em;
+	// margin-bottom: 1.5em;
 }
 
 h1 {
@@ -138,6 +128,30 @@ a:focus {
 	padding: 0 1em 0 1em;
 	margin-right: 0.5em;
 }
+/*********** FOOTER ***************/
+.wrapper {
+	min-height: calc(100vh - 89px); //sticky footer, 100vh is 100% of veiwport, 89px height of footer.
+		//min-height is 100vh - footer height, this prevents scroll bar from appearing.
+	// background-color: ;
+}
+
+footer { 
+	// position: absolute; 
+	// bottom: 0;
+	color: white;
+	// margin: 20px 0 0;
+	width: 100%;
+	// padding: 10px 0;
+	background: #58595B;
+	font-size: 1em;
+}
+// footer p {
+// 	height: 40px;
+// }
+.copyright {
+	text-align: center;
+}
+
 
 /***********  formTimeline  ***************/
 
