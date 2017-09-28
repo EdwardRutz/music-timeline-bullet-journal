@@ -11,6 +11,13 @@ body {
 	width: 90%;
 	min-height:100%; 
 	position:relative;
+	background-color: #000;
+}
+.wrapper {
+	min-height: calc(100vh - 50px);
+		//sticky footer, 100vh is 100% of veiwport, 89px height of footer.
+		//min-height is 100vh - footer height, this prevents scroll bar from appearing.
+	background-color: white;
 }
 p {
 	// font-size: .95em;
@@ -45,10 +52,10 @@ input {
 .text-center {
 	text-align: center;
 }
-.rowSpacing {
-  margin-top:5px;
-  margin-bottom:5px;  
-}
+// .rowSpacing {
+//   margin-top:5px;
+//   margin-bottom:5px;  
+// }
 .inputForm {
 	background-color: #E5E5E5; //#FFFFDF light yellow
 }
@@ -60,6 +67,25 @@ input {
 White, Black
 (OLD: #6495ED, cornflowerblue)
 */
+
+/*********** FOOTER ***************/
+
+footer { 
+	position: absolute; 
+	bottom: 0;
+	color: white;
+	// margin: 20px 0 0;
+	width: 100%;
+	// padding: 10px 0;
+	background: #58595B;
+	font-size: 1em;
+}
+// footer p {
+// 	height: 40px;
+// }
+.copyright {
+	text-align: center;
+}
 
 
 
@@ -116,7 +142,7 @@ a:focus {
 	// background-color: #FF8200;
 }
 
-/***********  Display Nav  ***************/
+/***********  Display.html Navbar  ***************/
 .displayNav ul {
 	list-style: none;
 	margin: 0 10px;
@@ -127,29 +153,6 @@ a:focus {
 	display: inline;
 	padding: 0 1em 0 1em;
 	margin-right: 0.5em;
-}
-/*********** FOOTER ***************/
-.wrapper {
-	min-height: calc(100vh - 89px); //sticky footer, 100vh is 100% of veiwport, 89px height of footer.
-		//min-height is 100vh - footer height, this prevents scroll bar from appearing.
-	// background-color: ;
-}
-
-footer { 
-	// position: absolute; 
-	// bottom: 0;
-	color: white;
-	// margin: 20px 0 0;
-	width: 100%;
-	// padding: 10px 0;
-	background: #58595B;
-	font-size: 1em;
-}
-// footer p {
-// 	height: 40px;
-// }
-.copyright {
-	text-align: center;
 }
 
 
