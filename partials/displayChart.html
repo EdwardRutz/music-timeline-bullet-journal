@@ -8,14 +8,14 @@
 
  <!-- Used Angular for this table. -->
 <center>
-<table width="90%">
-		<th>Date</th>
-		<th>Song</th>
-		<th>Journal Entry</th>
+<table width="90%" class="angTbl">
+		<th class="angTh">Date</th>
+		<th class="angTh">Song</th>
+		<th class="angTh">Journal Entry</th>
   <tr ng-repeat="item in eventArray | orderBy:'+date'" >
-    <td width="10%">{{item.date}}</td>
-    <td width="20%">{{item.eventTitle}}</td>
-    <td width="60%">{{item.journalEntry}}</td>
+    <td width="10%" class="angTd">{{item.date}}</td>
+    <td width="20%" class="angTd">{{item.eventTitle}}</td>
+    <td width="60%" class="angTd">{{item.journalEntry}}</td>
   </tr>
 </table>
 </center>
