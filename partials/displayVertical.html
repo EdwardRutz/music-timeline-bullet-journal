@@ -10,7 +10,7 @@
 
 <center>
 <table class="noBorder angTbl">
-  <tr ng-repeat="item in eventArray | orderBy:'+date'" id="asciiVertical">
+  <tr ng-repeat="item in eventArray | orderBy:'+date'" id="asciiVertical" ng-class-odd="'odd'" ng-class-even="'even'">
     <td class="angTd">{{item.date}} ---</td>
   	<td class="angTd">--- <img style="width: 75px; height: 75px; display:inline;"  ng-src="{{item.image}}"  title="{{item.journalEntry}}">   --- {{item.eventTitle}}</td>
   </tr>
