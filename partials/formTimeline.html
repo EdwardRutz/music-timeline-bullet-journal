@@ -1,14 +1,15 @@
 
+ <div class="promptArea"> <!-- .promptArea -->
   <h2>Enter Your Music &amp; Memories</h2>
-  
-  <div>
+
       <!-- Prompt Button -->
-    <button class="btn btn-default" ng-click="prompt()">Prompt Ideas</button>
+    <button class="btn btn-primary promptBtn" ng-click="prompt()">Prompt Ideas</button>
     <!-- <button ng-click="count = count + 1" ng-init="count=0">Increment</button> -->
     <span>
       prompt: {{promptItem}}
     </span>
-  </div>
+  </div> <!-- /.promptArea -->
+
 <br>
 <!-- <div ng-include="'partials/displayPrompt.html'"></div> -->
 <!-- <button ng-click="randomPrompt()">Prompt Ideas</button> -->
@@ -48,41 +49,41 @@
         <label>Add/Update</label>
         <button class="addBtn btn btn-success" ng-click="addInfo()">Submit</button>
       </div>
+
 </div> <!-- panel body -->
 
 <hr class="hrStyle1">
-<div> <!-- .musicDetails -->
+
 <!-- MUSIC DETAILS TABLE  -->
 <!-- Used Bootstrap for table  -->
-  <h2>Music Details</h2>
-  
   <!-- Get data usng AngularJS from Firebase -->
-    <div ng-repeat="item in eventArray | orderBy:'+date'">
-        <div class="panel-body">
-        <div class="col-xs-1">{{item.date}}</div>
-        <div class="col-xs-1">{{item.eventTitle}}</div>
-        <div class="col-xs-3">{{item.journalEntry}}</div>  
+  
+<div class="musicDetails">  <!-- .musicDetails -->
+ <h2>Music Details</h2> 
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="text-center">DATE</th>
+        <th class="text-center">SONG TITLE</th>
+        <th class="text-center">JOURNAL ENTRY</th>
+        <th class="text-center">ALBUM ART</th>
+        <th class="text-center">EDIT/DELETE</th>
+      </tr>
+    </thead>
+           
+    <tbody ng-repeat="item in eventArray | orderBy:'+date'">
+      <tr>
+        <td class="col-xs-1">{{item.date}}</td>   
+        <td class="col-xs-2">{{item.eventTitle}}</td>
+        <td class="col-xs-6">{{item.journalEntry}}</td>
+        <td class="col-xs-1 text-center"><img style="width: 75px; height: 75px;" ng-src="{{item.image}}" title="{{item.journalEntry}}"></td>
+        <td class="col-xs-1 text-center">
+          <button ng-click="editEvent(item.id)" class="btn btn-link fa fa-pencil" title="Edit"></button>
+          <button ng-click="deleteEvent(item.id)" id="deleteBtn" class="btn btn-link fa fa-trash-o" title="DELETE"></button>
+        </td>
+      </tr>
+    </tbody>
+  </table> 
+</div> <!-- /.musicDetails -->
 
-
-        <img style="width: 75px; height: 75px;" display: " " alt="" class="" ng-src="{{item.image}}">
-
-          <div class="col-xs-1">  <!-- Buttons -->          
-            <button ng-click="editEvent(item.id)" class="btn btn-link fa fa-pencil" title="Edit"></button>
-
-            <!-- <button ng-click="editEvent(item.id)" class="btn btn-link">[View Details]</button>  -->
-
-            <button ng-click="deleteEvent(item.id)" id="deleteBtn" class="btn btn-link fa fa-trash-o" title="DELETE"></button>
-          </div> <!-- Buttons --> 
-      </div>
-    </div> <!-- /ng-repeat -->
-  </div> <!-- /.musicDetails -->
-
-  <!-- MUSIC SEARCH ON LAST.FM  -->
-  <div class="col-xs-6">
-    <h2>MUSIC SEARCH</h2>
-  </div> 
-      <br>
-
-
-
- 
+<br><br>
