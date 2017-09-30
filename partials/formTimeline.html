@@ -3,20 +3,12 @@
   <h2>Enter Your Music &amp; Memories</h2>
 
       <!-- Prompt Button -->
-    <button class="btn btn-primary btn-sm promptBtn" ng-click="prompt()">Prompt Ideas</button>
+    <button class="btn btn-primary btn-sm promptBtn" ng-click="count = count + 1" ng-init="count=0">Prompt Ideas</button>
+    <!-- <button class="btn btn-primary btn-sm promptBtn" ng-click="prompt()">Prompt Ideas</button> -->
     <!-- <button ng-click="count = count + 1" ng-init="count=0">Increment</button> -->
     <span>
-      Prompt Idea: {{currentPrompt}}
+      Prompt Idea: {{count}}
     </span>
-
-<!-- Count button -->
-<br/>
-    <button ng-click="count = count + 1" ng-init="count=0">
-  Increment
-</button>
-<span>
-  count: {{count}}
-</span>
 
   </div> <!-- /.promptArea -->
 
