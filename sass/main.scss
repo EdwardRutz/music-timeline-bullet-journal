@@ -155,6 +155,12 @@ a:focus {
 }
 
 /***********  Display.html Navbar  ***************/
+.printBtn {
+	float: right;
+	margin-right: 200px;
+	margin-top: 5px;
+}
+
 .displayNav ul {
 	list-style: none;
 	margin: 0 10px;
@@ -166,8 +172,32 @@ a:focus {
 	padding: 0 1em 0 1em;
 	margin-right: 0.5em;
 }
+.displayNav a {
+	font-weight: bolder;
+}
+nav a.selected  {
+	color: #FF8200; /* TN Orange*/
+	text-decoration: underline;
+}
+/* selected nav link */
+ a.selected  {
+	color: #FF8200; /* TN Orange*/
+	text-decoration: underline;
+}
 
+.displayNav a:hover {
+	color: #FF8200; /* TN Orange*/
+	text-decoration: underline;
+	font-weight: bold;
+}
 
+.displayNav a:focus {
+	color: #FF8200; /* TN Orange*/
+	text-decoration: underline;
+	font-weight: bold;
+	// color: white;
+	// background-color: #FF8200;
+}
 /***********  formTimeline  ***************/
 
 // .rowSpacing {
@@ -212,6 +242,22 @@ hr.hrStyle1 {
 //     border: 0;
 //     box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 // }
+
+/***********  Display Journal  ***************/
+
+.journalContainer {
+	width: 80%;
+	margin: auto auto;
+}
+.journalHeading {
+	font-weight: bold;
+	font-size: 20px;
+}
+.journalText {
+	margin-bottom: 30px;
+	margin-left: 20px;
+	font-size: 16px;
+}
 
 
 
