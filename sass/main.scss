@@ -59,6 +59,17 @@ input {
 	background-color: #E5E5E5; //#FFFFDF light yellow
 }
 
+/*********** BUTTONS ***************/
+
+.clearBtn {
+    background: none;
+		// padding: 12px 22px;
+		border: 1px solid green;
+    color: green;
+}
+
+
+
 /* ------- COLORS ------- */
 /* 
 #58595B; UT Smokey (rgb: 88, 89, 91)   
@@ -198,15 +209,16 @@ nav a.selected  {
 }
 /***********  formTimeline  ***************/
 
-// .rowSpacing {
-// 	margin-top: 0px;
-// 	margin-bottom: 0px;
-// }
+.redDelete {
+	color: red;
+}
+
 
 .inputForm {
 	background-color: #e5e5e5; //#f2f2f2;
 	margin: auto auto;
 	width: 95%;
+	text-align: center;
 }
 
 .promptArea {
@@ -240,6 +252,12 @@ hr.hrStyle1 {
 //     border: 0;
 //     box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 // }
+
+// .rowSpacing {
+// 	margin-top: 0px;
+// 	margin-bottom: 0px;
+// }
+
 
 /***********  Display Journal  ***************/
 
