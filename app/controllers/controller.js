@@ -17,13 +17,11 @@ app.controller("controller", function($scope, eventFactory, $location) {
 	eventFactory.getEvent()  //define function
 	.then(function(eventCollection) {
 		$scope.eventArray = eventCollection;//binds data to scope
-		console.log("$scope.eventArray", $scope.eventArray);
 	});
 
 	const showAllEvents = function(){
     	eventFactory.getEvent()
     	.then((eventArray) => {
-    		console.log("showAllEvents", eventArray);
     		$scope.eventArray =  eventArray;
     	});
     };
@@ -74,6 +72,33 @@ app.controller("controller", function($scope, eventFactory, $location) {
 			journalEntry :""
 			};
 		};
+
+	
+	
+		// PROMPT BUTTON - DISPLAY ITEM FROM ARRAY
+    // $scope.promptList = { 
+		// 	text: [
+		// 		"What is the first song you remember liking?",
+		// 		"Think about a special person in your life, what song reminds you of them?",
+   	// 		"What was the first music you bought?"
+		// 	] 
+		// };
+
+	
+		// PROMPT BUTTON - DISPLAY ITEM FROM ARRAY
+  // $scope.select = function(item) {
+  //   scope.selected = item;
+  // };
+    
+	// 	$scope.promptArray = [
+	// 		"What is the first song you remember liking?",
+	// 		"Think about a special person in your life, what song reminds you of them?",
+  //  		"What was the first music you bought?"
+	// 		]
+
+
+
+
 
 
 // Create an events object with an Array of Data

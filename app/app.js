@@ -38,7 +38,19 @@ app.config(["$routeProvider",
 		templateUrl: "partials/displayVertical.html",
 		controller: "controller",
 		})
+		.when("/displayJournal", {
+		templateUrl: "partials/displayJournal.html",
+		controller: "controller",
+		})
+
+
 		.otherwise("/");
 }]);
 
 
+
+		// **** SuperTL with timelinejs3 ****/
+		// .when("/displaySuperTL", {
+		// templateUrl: "angular-timelinejs3/app/demo/#/demo",
+		// controller: "controller",
+		// })
