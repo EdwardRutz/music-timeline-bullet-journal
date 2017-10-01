@@ -73,9 +73,15 @@ app.controller("controller", function($scope, eventFactory, $location) {
 			};
 		};
 
-	
-	
-		// PROMPT BUTTON - DISPLAY ITEM FROM ARRAY
+	showAllEvents();
+});
+
+
+
+
+
+
+	// PROMPT BUTTON - DISPLAY ITEM FROM ARRAY
     // $scope.promptList = { 
 		// 	text: [
 		// 		"What is the first song you remember liking?",
@@ -129,10 +135,3 @@ angular.module("myApp", [])
             );
         } ]);
 *************************/
-
-
-
-	showAllEvents();
-});
-
-

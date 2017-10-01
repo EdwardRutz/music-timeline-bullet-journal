@@ -14,7 +14,7 @@ body {
 	background-color: #000;
 }
 .wrapper {
-	min-height: calc(100vh - 50px);
+	min-height: calc(100vh - 100px);
 		//sticky footer, 100vh is 100% of veiwport, 89px height of footer.
 		//min-height is 100vh - footer height, this prevents scroll bar from appearing.
 	background-color: white;
@@ -27,6 +27,7 @@ p {
 h1 {
 	text-align: center;
 	font-weight: bold;
+	margin-top: 16px;
 }
 h2 {
 	font-style: italic;
@@ -51,10 +52,8 @@ input {
 .text-center {
 	text-align: center;
 }
-// .rowSpacing {
-//   margin-top:5px;
-//   margin-bottom:5px;  
-// }
+
+
 .inputForm {
 	background-color: #E5E5E5; //#FFFFDF light yellow
 }
@@ -78,7 +77,16 @@ White, Black
 (OLD: #6495ED, cornflowerblue)
 */
 
+/*********** PRINT BUTTON ***************/
+// Adapted from: https://stackoverflow.com/questions/38787053/print-a-html-page-using-window-print
+// formatting for print page doesn't carry over to print window.
+// #print {
+//     background-color: red;
+// }
+
+
 /*********** FOOTER ***************/
+/* See Wrapper for sticky footer  */
 
 footer { 
 	position: absolute; 
@@ -137,7 +145,6 @@ nav a {
 	color: #fff;
 	font-weight: bolder;
 }
-
 
 // nav a:visited {
 // 	color: #5CC9F5;  //Maya Blue 
@@ -216,7 +223,7 @@ nav a.selected  {
 
 .inputForm {
 	background-color: #e5e5e5; //#f2f2f2;
-	margin: auto auto;
+	margin: 25px auto 25px auto;
 	width: 95%;
 	text-align: center;
 }
@@ -253,12 +260,6 @@ hr.hrStyle1 {
 //     box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 // }
 
-// .rowSpacing {
-// 	margin-top: 0px;
-// 	margin-bottom: 0px;
-// }
-
-
 /***********  Display Journal  ***************/
 
 .journalContainer {
@@ -277,7 +278,6 @@ hr.hrStyle1 {
 
 
 
-
 /***********  Display Chart  ***************/
 /* Formatting is for an AngularJS table.
 /* Made specific classes for the AngularJS table so it would not interfer with the bootstrap table.
@@ -285,7 +285,8 @@ hr.hrStyle1 {
 .angTbl  {
   border: 1px solid #000;
   border-collapse: collapse;
-  padding: 5px;
+	padding: 5px;
+	margin: auto auto;
 }
 .angTh  {
   border: 1px solid #000;
