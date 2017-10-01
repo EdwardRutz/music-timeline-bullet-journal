@@ -1,26 +1,32 @@
 
 
 <ul class="displayNav">
-	<li><a ng-href="#!/displayVertical">[Timeline]</a></li>
+		<li><a ng-href="#!/displayVertical">[Timeline]</a></li>
     <li><a ng-href="#!/displayChart">[Chart]</a></li>
     <li><a ng-href="#!/displayJournal">[Journal]</a></li>
-</ul>
+
+    <div class="printBtn">
+      <a href="http://www.cornify.com" onclick="cornify_add();return false;"><img src="https://www.cornify.com/assets/cornify-button.png" width="82" height="25" border="0" alt="Cornify" /></a><script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>   
+      <button id ="btnid" class="addBtn btn btn-success btn-xs fa fa-print" onclick="printIt()">&ensp; PRINT</button>
+    </div>
+ </ul>
 <br>
 
+<div id="printArea" class="printable">  <!-- .printable -->
  <!-- Used Angular for this table. -->
 <center>
-<table width="90%" class="angTbl">
-		<th class="angTh">Date</th>
-		<th class="angTh">Song</th>
-		<th class="angTh">Journal Entry</th>
+<table width="90%" class="angTbl printable">
+		<th id="print" class="angTh printable">Date</th>
+		<th id="print" class="angTh printable">Song</th>
+		<th id="print" class="angTh printable">Journal Entry</th>
   <tr ng-repeat="item in eventArray | orderBy:'+date'" >
-    <td width="10%" class="angTd">{{item.date}}</td>
-    <td width="20%" class="angTd">{{item.eventTitle}}</td>
-    <td width="60%" class="angTd">{{item.journalEntry}}</td>
+    <td width="10%" id="print" class="angTd printable">{{item.date}}</td>
+    <td width="20%" id="print" class="angTd printable">{{item.eventTitle}}</td>
+    <td width="60%" id="print" class="angTd printable">{{item.journalEntry}}</td>
   </tr>
 </table>
 </center>
-
+</div>  <!-- /.printable -->
 
 
 <!-- Code to sort date field -->

@@ -1,66 +1,61 @@
 
  <div class="promptArea"> <!-- .promptArea -->
   <h2>Enter Your Music &amp; Memories</h2>
-
-      <!-- Prompt Button -->
-    <button class="btn btn-primary btn-sm promptBtn" ng-click="prompt()">Prompt Ideas</button>
-    <!-- <button ng-click="count = count + 1" ng-init="count=0">Increment</button> -->
+    <!-- Prompt Button -->
+    <button class="btn btn-primary btn-sm promptBtn" ng-click="count = count + 1" ng-init="count=0">Prompt Ideas</button>
+    <!-- <button class="btn btn-primary btn-sm promptBtn" ng-click="prompt()">Prompt Ideas</button> -->
     <span>
-      Prompt Idea: {{currentPrompt}}
+       {{count}} {{"What is the first song you remember liking?"}}
     </span>
+</div> <!-- /.promptArea -->
 
-<!-- Count button -->
-<br/>
-    <button ng-click="count = count + 1" ng-init="count=0">
-  Increment
-</button>
-<span>
-  count: {{count}}
-</span>
-
-  </div> <!-- /.promptArea -->
-
-<br>
-<!-- <div ng-include="'partials/displayPrompt.html'"></div> -->
-<!-- <button ng-click="randomPrompt()">Prompt Ideas</button> -->
 
 <!-- MUSIC INPUT FORM  -->
 <!-- Input data into database.  Used Bootstrap for the chart -->
-<div class="panel-body inputForm">
 
+<div class="inputForm">
         <!-- hidden id field used to show data -->
         <input type="hidden" ng-model="entry.id"/>
+  <table class="table table-condensed">
+   
+    <thead>
+      <tr>
+        <th class="text-center">DATE</th>
+        <th class="text-center">SONG TITLE</th>
+        <th class="text-center">JOURNAL ENTRY</th>
+        <th class="text-center">ALBUM ART</th>
+        <th class="text-center">EDIT</th>
+        <th class="text-center">DELETE</th>
+      </tr>
+    </thead>
 
-        <div class="col-xs-1">
-          <label>Date</label>
+    <tbody>
+      <tr>
+        <td class="col-xs-1">
           <input type="text" class="form-control" placeholder="2018-04-21" ng-model="entry.date"/>
-        </div>
-
-        <div class="col-xs-3">
-          <label>Song Title</label>
+        </td>   
+        <td class="col-xs-2">
           <input type="text" class="form-control" placeholder="Song Title" ng-model="entry.eventTitle"/>
-        </div>
-        <div class="col-xs-4">
-          <label>Journal Entry</label>
-          <!-- <textarea class="" rows="1" id=""></textarea> -->
-          <input type="text" class="form-control" placeholder="This song reminds me when..." ng-model="entry.journalEntry"/>
-        </div>
-        <div class="col-xs-2">
-           <label>Paste Image Link</label>
+        </td>
+        <td class="col-xs-4">
+          <textarea class="form-control" rows="3" placeholder="This song reminds me when..." ng-model="entry.journalEntry"/></textarea>
+        </td>
+        <td class="col-xs-2">
           <input type="text" class="form-control" placeholder="http://www.albumImage.com" ng-model="entry.image"/>
-        </div>
+        </td>
+        <td class="col-xs-1">
+          <button class="addBtn btn btn-default clearBtn" ng-click="clearInfo()">Clear</button>
+        </td> 
+        <td class="col-xs-1">
+          <button class="addBtn btn btn-success" ng-click="addInfo()">Submit</button>
+        </td>
+      </tr>
+     </tbody>
+  </table>
+  
+</div> <!-- /.inputForm  -->
 
-        <div class="col-xs-1">
-          <label>Clear Row</label>
-          <button class="addBtn btn btn-default" ng-click="clearInfo()">Clear</button>
-      </div> 
 
-      <div class="col-xs-1">
-        <label>Add/Update</label>
-        <button class="addBtn btn btn-success" ng-click="addInfo()">Submit</button>
-      </div>
-
-</div> <!-- panel body -->
 
 <hr class="hrStyle1">
 
@@ -77,10 +72,9 @@
         <th class="text-center">SONG TITLE</th>
         <th class="text-center">JOURNAL ENTRY</th>
         <th class="text-center">ALBUM ART</th>
-        <th class="text-center">EDIT  &ensp; DELETE</th>
+        <th class="text-center">EDIT DELETE</th>
       </tr>
-    </thead>
-           
+    </thead>         
     <tbody ng-repeat="item in eventArray | orderBy:'+date'">
       <tr>
         <td class="col-xs-1">{{item.date}}</td>   
@@ -89,7 +83,7 @@
         <td class="col-xs-1 text-center"><img style="width: 75px; height: 75px;" ng-src="{{item.image}}" title="{{item.journalEntry}}"></td>
         <td class="col-xs-1 text-center">
           <button ng-click="editEvent(item.id)" class="btn btn-link fa fa-pencil" title="Edit"></button>
-          <button ng-click="deleteEvent(item.id)" id="deleteBtn" class="btn btn-link fa fa-trash-o" title="DELETE"></button>
+          <button ng-click="deleteEvent(item.id)" id="deleteBtn" class="btn btn-link fa fa-trash-o redDelete" title="DELETE"></button>
         </td>
       </tr>
     </tbody>

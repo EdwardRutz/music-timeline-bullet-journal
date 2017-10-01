@@ -1,19 +1,23 @@
 
-
 <ul class="displayNav">
 		<li><a ng-href="#!/displayVertical">[Timeline]</a></li>
     <li><a ng-href="#!/displayChart">[Chart]</a></li>
     <li><a ng-href="#!/displayJournal">[Journal]</a></li>
-    <!-- <li><a ng-href="#!/displaySuperTL">[Super Timeline]</a></li>    -->
-</ul>
+
+    <div class="printBtn">
+      <a href="http://www.cornify.com" onclick="cornify_add();return false;"><img src="https://www.cornify.com/assets/cornify-button.png" width="82" height="25" border="0" alt="Cornify" /></a><script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>   
+      <button id ="btnid" class="addBtn btn btn-success btn-xs fa fa-print" onclick="printIt()">&ensp; PRINT</button>
+    </div>
+ </ul>
 <br>
 
 
 <center>
+<div id="printArea" class="printable">  <!-- .printable -->
 <table class="noBorder angTbl">
   <tr ng-repeat="item in eventArray | orderBy:'+date'" id="asciiVertical" ng-class-odd="'odd'" ng-class-even="'even'">
-    <td class="angTd">{{item.date}} ---</td>
-  	<td class="angTd">--- <img style="width: 75px; height: 75px; display:inline;"  ng-src="{{item.image}}"  title="{{item.journalEntry}}">   --- {{item.eventTitle}}</td>
+    <td id="print" class="angTd printable">{{item.date}} ---</td>
+  	<td id="print" class="angTd printable">--- <img style="width: 75px; height: 75px; display:inline;"  ng-src="{{item.image}}"  title="{{item.journalEntry}}">   --- {{item.eventTitle}}</td>
   </tr>
   <!-- Angular-Tooltips -->
   <!-- Call the directive wherever you want in your html page
@@ -21,8 +25,14 @@
 </table>
 
 <br>
+ </div> <!-- /.printable -->
 </center>
 
 
-
-
+<!-- <div id="non-print">Some not essential div</div>
+    <div id="printArea" class="printable">
+    <div id="print" class="printable"><h1>My heading!</h1></div>
+    </div>
+		<button id ="btnid" type="button">Print!</button>
+		
+ -->
