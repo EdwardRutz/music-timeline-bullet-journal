@@ -2,10 +2,9 @@
  <div class="promptArea"> <!-- .promptArea -->
   <h2>Enter Your Music &amp; Memories</h2>
     <!-- Prompt Button -->
-    <button class="btn btn-primary btn-sm promptBtn" ng-click="count = count + 1" ng-init="count=0">Prompt Ideas</button>
-    <!-- <button class="btn btn-primary btn-sm promptBtn" ng-click="prompt()">Prompt Ideas</button> -->
+    <button class="btn btn-primary btn-sm promptBtn" ng-click="count = count + 1" ng-init="count=-1">Prompt Ideas</button>
     <span>
-       {{count}} {{"What is the first song you remember liking?"}}
+       {{promptList[count]}}
     </span>
 </div> <!-- /.promptArea -->
 
